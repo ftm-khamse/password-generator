@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container">
+        <h1>Password Generator</h1>
+        <div class="box">
+            <i class="fas fa-copy icon"></i>
+        </div>
+        <div class="line">
+            <label for="length">Password Length</label>
+            <input type="number" class="length" id="length">
+        </div>
+
+        <div class="line">
+            <label for="upper">include uppercase letters</label>
+            <input type="checkbox" name="" id="upper">
+        </div>
+
+        <div class="line">
+            <label for="lower">include lowercase letters</label>
+            <input type="checkbox" name="" id="lower">
+        </div>
+
+        <div class="line">
+            <label for="number">include numbers</label>
+            <input type="checkbox" name="" id="number">
+        </div>
+
+        <div class="line">
+            <label for="symbol">include symbols</label>
+            <input type="checkbox" name="" id="symbol">
+        </div>
+
+        <button class="btn">generate password</button>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
