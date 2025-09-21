@@ -11,8 +11,8 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: yellow;
-    color: black;
+    background: #D6EFFF;
+    color: #18396b;
     font-family: "Roboto", sans-serif;
     text-transform: capitalize;
 }
@@ -25,13 +25,14 @@ a{
 input,button,select {
     font-family: inherit;
     text-transform: inherit;
+    background: #B0E0E6;
 }
 
 .container{
     padding: 1.5rem;
-    border: 1px solid black;
-    background: rgb(153, 150, 194);
-    /* text-align: center; */
+    background: #89AFDF;
+    border-radius: 1.2rem;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .15);
 }
 
 h1{
@@ -47,8 +48,26 @@ h1{
     height: 1rem;
     padding: 1rem;
     margin: 1rem 0;
-    background: white;
+    background: #B0E0E6;
     font-size: .85rem;
+}
+
+#toast{
+    visibility: hidden;
+    min-width: 120px;
+    background:#18396b;
+    color: #D6EFFF;
+    padding: .5rem;
+    position: fixed;
+    right: 35%;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity .4s, visibility .4s;
+}
+
+#toast.show{
+    visibility: visible;
+    opacity: 1;
 }
 
 .icon{
@@ -88,13 +107,21 @@ input{
 .btn{
     width: 100%;
     padding: .7rem;
-    background: rgb(108, 98, 240);
+    margin-top: .7rem;
+    background: #638FCF;
     border: none;outline: none;
+    border-radius: .8rem;
     font-size: 1rem;
     cursor: pointer;
-
+    transition: all .2s  ease;
 }
 
 .btn:hover{
-    background: rgb(55, 53, 75);
+    background:  #18396b;
+    color: #D6EFFF;
+    transform: translateY(-2px);
+}
+
+.btn:active{
+    transform: scale(.95);
 }

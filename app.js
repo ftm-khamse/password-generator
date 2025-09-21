@@ -6,7 +6,9 @@ let lengthEl = document.querySelector('.length');
 let upperBtn = document.getElementById('upper');
 let lowBtn = document.getElementById('lower');
 let numBtn = document.getElementById('number');
-let symbolBtn = document.getElementById('symbol')
+let symbolBtn = document.getElementById('symbol');
+const copyIcon = document.querySelector('.icon');
+const toast = document.getElementById('toast');
 let lowerActive = false;
 let upperActive = false;
 let numberActive = false;
@@ -113,3 +115,26 @@ btn.addEventListener('click', () => {
     
 });
 
+copyIcon.addEventListener('click',() => {
+    const textTocopy = answer.innerText.trim();
+    if(textTocopy === ""){
+        toast.innerText = "Nothing to copy!";
+        toast.classList.add("show");
+
+        setTimeout(()=>{
+        toast.classList.remove("show");
+    },2000);
+    return;
+    }
+
+    navigator.clipboard.writeText(textTocopy)
+    .then(() => {
+        toast.innerText = "copied to clipboard!";
+        toast.classList.add("show");
+
+        setTimeout(()=>{
+        toast.classList.remove("show");
+    },2000);
+
+    });
+});
